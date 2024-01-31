@@ -1,0 +1,325 @@
+body, html {
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-image: url(img/bg.png);
+}
+
+.video-container {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    margin-right: 70px;
+}
+
+video {
+    width: 107%;
+    height: 107%;
+    margin-bottom: 50px;
+    border: 4px solid #3333;
+    border-radius: 25px;
+    border-color: dimgrey;
+    background-color: black;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.controls {
+    position:absolute;
+    bottom: 20px;
+    width: 107%;
+    display: flex;
+    justify-content: space-around;
+}
+button1 {
+      background: transparent;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      border-radius: 25px;
+      padding: 10px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+  }
+button {
+      background: transparent;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      border-radius: 25px;
+      padding: 10px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 20px;
+      display: flex;
+      justify-content:center;
+      align-items:center;
+      margin: auto;
+      margin-left: 50px;
+}
+button4 {
+      background: transparent;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      border-radius: 25px;
+      padding: 10px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 20px;
+      display: flex;
+      justify-content:center;
+      align-items:center;
+      margin: auto;
+      margin-left: 50px;
+}
+button2 {
+      background: transparent;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      border-radius: 25px;
+      padding: 10px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 20px;
+      display: flex;
+      justify-content:center;
+      align-items:center;
+      margin: auto;
+}
+button3 {
+     background: transparent;
+     color: #ffffff;
+     border: 2px solid #ffffff;
+     border-radius: 25px;
+     padding: 10px 30px;
+     font-size: 16px;
+     cursor: pointer;
+     text-align: center;
+     margin: 30px;
+     text-align: center;
+     margin-top: 50px;
+}
+button:hover {
+      background-color: #ffffff;
+      color: #000000;
+}
+button1:hover {
+      background-color: #ffffff;
+      color: #000000;
+}
+button2:hover {
+      background-color: #ffffff;
+      color: #000000;
+}
+button3:hover {
+      background-color: #ffffff;
+      color: #000000;
+}
+.menu-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99998;
+    background-color: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(8px);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s, visibility .4s;
+}
+.modal__box {
+    position: relative;
+    max-width: 710px;
+    padding: 50px;
+    z-index: 1;
+    margin: 30px 15px;
+    background-image: url(img/bg.png);
+    box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+    transform: scale(0);
+    transition: transform .8s;
+    border: 2px solid #999999;
+    border-radius: 25px;
+}
+.modal__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.modal__close-btn svg path {
+    transition: fill .1s;
+}
+
+.modal__close-btn:hover svg path {
+    fill: blue;
+}
+
+.modal__close-btn:active svg path {
+    fill: rgb(186, 53, 0);
+}
+
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal.open .modal__box {
+    transform: scale(1);
+}
+h2 {
+    text-align: center;
+    font-size: 128px;
+    color: white;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery {
+    width: 80%;
+    max-width: 1200px;
+    margin: 3% auto;
+    text-align: center;
+    position: absolute;
+    margin-top: 1500px;
+    border: 2px solid #999999;
+    border-radius: 25px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.image-box {
+    border: 2px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+    max-height: 100px;
+    max-width: 200px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.image-box:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+    .image-box {
+        margin-bottom: 1rem;
+    }
+}
+.image-box img:hover {
+  filter: brightness(40%);
+}
+.background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-image: url(img/bg.png);
+  color: #fff;
+  text-align: center;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  transition: opacity .4s, visibility .4s;
+  border: 1px solid #999999;
+  border-radius: 25px;
+}
+
+.popup h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 32px;
+}
+.modalwindow {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  padding: 20px;
+  border: 2px solid #999999;
+  border-radius: 25px;
+  max-width: 2000px;
+  margin: 30px 15px;
+  box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+  transition: opacity .4s, visability .4s;
+  border: 2px solid #999999;
+  border-radius: 25px;
+  max-height: 1000px;
+  background-image: url(img/bg.png);
+  flex: auto;
+  justify-items: auto;
+}
+
+.modalwindow h2 {
+  font-size: 64px;
+}
+.background2 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+
+}
+.buttons3 {
+    text-align: center;
+    align-content: center;
+    margin: auto;
+}

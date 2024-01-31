@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Видео фон</title>
+<link rel="stylesheet" href="main.css">
+<script src="js/script.js" defer></script>
+    <script defer src="js/popuphide.js"></script>
+    <script defer src="js/nextep.js"></script>
+    <script defer src="js/popupopen.js"></script>
+    <script defer src="js/sound.js"></script>
+
+</head>
+<body>
+<div class="background">
+<div class="popup" id="popup">
+    <h2>Вам есть 18 лет?</h2>
+    <button3 class="closeBtn">Да</button3>
+    <button3 class="closeBtn" onclick="window.close()">Нет</button3>
+    <p>Мы не пропогандируем наркотические средства, курение и алкоголь</p>
+
+</div>
+</div>
+<div class="video-container">
+    <video autoplay muted loop id="background-video">
+        <source src="videos/video.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+        <h1>Название Интерактивного кино</h1>
+        <div class="buttons">
+            <button class="button" onclick="document.location='film.html'">Смотреть</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

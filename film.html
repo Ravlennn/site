@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script src="js/script.js" defer></script>
+    <script defer src="js/popuphide.js"></script>
+    <script defer src="js/nextep.js"></script>
+    <script defer src="js/popupopen.js"></script>
+    <script defer src="js/sound.js"></script>
+    <link rel="stylesheet" href="film.css">
+    <meta charset="UTF-8">
+    <title>Видео Плеер</title>
+    <style>
+    </style>
+</head>
+<body>
+<div class="background">
+<div class="popup" id="popup">
+    <h2>Сложный выбор</h2>
+    <button2 class="closeBtn" onclick="resumeVideo()">Старт</button2>
+</div>
+</div>
+<div class="overlay"></div>
+<button1 class="menu-button" onclick="handleButtonClick()">К эпизодам</button1>
+<div class="video-container">
+    <video id="video">
+        <source src="videos/video.mp4" type="video/mp4" id="source">
+    </video>
+    <div class="controls">
+        <button id="open-modal-btn">Пауза</button>
+        <button onclick="toggleFullScreen()">На весь экран</button>
+        <button onclick="skipAhead(10)">+10 сек</button>
+        <button4 id="volume">
+            <img src="img/volume.png" width="20" height="20" alt="">
+            <input type="range" min="0" max="1" step="0.01" value="1" id="volumeSlider" data-volume-cookie="volume">
+            </button4>
+        </div>
+    </div>
+<div class="gallery">
+    <h1>Эпизоды</h1>
+    <div class="row">
+        <div class="image-box" id="imageBox">
+            <img src="img/1.png" alt="">
+        </div>
+        <div class="image-box" id="imageBox">
+            <img src="img/1.1.png" alt="">
+        </div>
+        <div class="image-box" id="imageBox">
+            <img src="img/1.2.png" alt="">
+        </div>
+    </div>
+    <div class="row" id="box">
+        <div class="image-box" id="imageBox">
+            <img src="img/2.png" alt="">
+        </div>
+        <div class="image-box" id="imageBox">
+            <img src="img/3.png" alt="">
+        </div>
+        <div class="image-box" id="imageBox">
+            <img src="img/img4.png" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="image-box" id="imageBox">
+            <img src="img/img4.png" alt="">
+        </div>
+        <div class="image-box" id="imageBox">
+            <img src="img/img4.png" alt="">
+        </div>
+        <div class="image-box" id="imageBox">
+            <img src="img/img4.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="modal" id="my-modal">
+    <div class="modal__box">
+        <h2>Пауза</h2>
+        <div class="buttons">
+            <button id="close-my-modal-btn-1" onclick="togglePlay()">К эпизодам</button>
+            <button id="close-my-modal-btn-2" onclick="resumeVideo()">Продолжить</button>
+            <button id="close-my-modal-btn-3" onclick="playAgain(0)">Смотреть эпизод заново</button>
+        </div>
+    </div>
+</div>
+<div class="background2" id="background2">
+<div class="modalwindow" id="modalwindow">
+    <h2 id="modalTitle"></h2>
+    <div class="buttons3">
+    <button3  id="closeButton1"></button3>
+    <button3  id="closeButton2"></button3>
+    </div>
+</div>
+</div>
+</body>
+</html>
